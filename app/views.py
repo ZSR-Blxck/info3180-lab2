@@ -4,7 +4,7 @@ Jinja2 Documentation:    https://jinja.palletsprojects.com/
 Werkzeug Documentation:  https://werkzeug.palletsprojects.com/
 This file creates your application.
 """
-
+import datetime
 from app import app
 from flask import render_template, request, redirect, url_for, flash
 
@@ -18,6 +18,10 @@ def home():
     """Render website's home page."""
     return render_template('home.html')
 
+@app.route('/profile/')
+def profile():
+    """Render website's profile page."""
+    return render_template('profile.html')
 
 @app.route('/about/')
 def about():
@@ -52,6 +56,12 @@ def add_header(response):
 def page_not_found(error):
     """Custom 404 page."""
     return render_template('404.html'), 404
+
+def format_date_joined(y,m,d):
+    x = datetime.datetime.now()
+    date_joined=datetime.date(y,m,d)
+    print "Joined"+(date_joined.strftime("%b, %Y"))
+
 
 
 if __name__ == '__main__':

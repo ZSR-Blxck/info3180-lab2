@@ -1,3 +1,13 @@
 body {
     padding-top: 5rem;
 }
+.head{
+    background-color: maroon;
+    align-content: center;
+}
+.content{
+
+}
+.counter{
+    text-align: center;
+}
