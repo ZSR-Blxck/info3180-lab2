@@ -6,6 +6,7 @@ This file creates your application.
 """
 import datetime
 from app import app
+from jinja2 import Template
 from flask import render_template, request, redirect, url_for, flash
 
 
@@ -21,12 +22,16 @@ def home():
 @app.route('/profile/')
 def profile():
     """Render website's profile page."""
-    return render_template('profile.html')
+    
+    date= format_date_joined()
+    tm = Template("Joined {{ date }}")
+    msg = tm.render(date=date)
+    return render_template('profile.html',time=msg)
 
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Zavier Ratray")
 
 
 ###
@@ -57,10 +62,10 @@ def page_not_found(error):
     """Custom 404 page."""
     return render_template('404.html'), 404
 
-def format_date_joined(y,m,d):
-    x = datetime.datetime.now()
-    date_joined=datetime.date(y,m,d)
-    print "Joined"+(date_joined.strftime("%b, %Y"))
+def format_date_joined():
+    now = datetime.datetime.now()
+    date_joined=datetime.date(2022,2,7)
+    return date_joined.strftime("%B, %Y")
 
 
 

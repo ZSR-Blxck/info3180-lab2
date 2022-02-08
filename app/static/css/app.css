@@ -3,11 +3,14 @@ body {
 }
 .head{
     background-color: maroon;
-    align-content: center;
+    text-align: center;
 }
 .content{
 
 }
 .counter{
+    text-align: center;
+}
+table{
     text-align: center;
 }
