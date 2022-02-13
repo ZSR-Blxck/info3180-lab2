@@ -64,8 +64,7 @@ def page_not_found(error):
 
 def format_date_joined():
     now = datetime.datetime.now()
-    date_joined=datetime.date(2022,2,7)
-    return date_joined.strftime("%B, %Y")
+    return now.strftime("%B, %Y")
 
 
 

@@ -2,7 +2,7 @@
 
 {% block main %}
 <div class="head">
-	<img src="" id="me">
+	<img src="{{url_for('static', filename='me.jfif')}}">
 	<h1>Zavier Rattray</h1>	
 	<a href="">@brogaad</a>
 	<p>Mandeville, Manchester</p>
@@ -10,22 +10,23 @@
 </div>
 
 <div class="content">
-	<p>I am an aspiring developer with a keen interest in PHP and SQL. I guess you would say backend. Contact me if you you'd like to work together on a new project.</p>
-	<div class="counter">
-		<table>
-			<tr>
-				<th>7</th>
-				<th>100</th>
-				<th>250</th>
-			</tr>
-			<tr>
-				<td>Posts</td>
-				<td>Following</td>
-				<td>Followers</td>
-			</tr>
-		</table>
-		<button>Follow</button>
-	</div>
+	<p class="bio">I am an aspiring developer with a keen interest in I guess you would say backend development. Contact me if you you'd like to work together on a new project.</p>
 </div>
+
+<div class="counter">
+	<table id="thing">
+		<tr>
+			<th>7</th>
+			<th>100</th>
+			<th>250</th>
+		</tr>
+		<tr>
+			<td>Posts</td>
+			<td>Following</td>
+			<td>Followers</td>
+		</tr>
+	</table>
+</div>
+<button>Follow</button>
 
 {% endblock %}

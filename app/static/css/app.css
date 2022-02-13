@@ -1,16 +1,35 @@
 body {
     padding-top: 5rem;
+    align-content: center;
+
 }
 .head{
     background-color: maroon;
     text-align: center;
+    padding-bottom: 25px;
+}
+img{
+    padding-top: 50px;
+    border-radius: 250px;
+}
+p{
+    color: white;
+}
+p.bio{
+    color: black;
 }
 .content{
-
+    padding-top: 15px;
+    padding-right: 200px;
+    padding-left: 200px;
+    text-align: center;
 }
 .counter{
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
-table{
-    text-align: center;
+button{
+    color: maroon;
+    background-color: grey;
+    border-radius: 5px;
 }
